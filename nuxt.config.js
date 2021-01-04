@@ -56,7 +56,16 @@ export default {
       description: 'Proyecto realizado en NuxtJs'
     },
     // workbox: {
-     
+    //   cachingExtensions: '@/plugins/worbox-sync.js',
+    //   enabled: true,
+    //   runtimeCaching: [
+    //   {
+    //     urlPattern: 'https://firebase.google.com/.*',
+    //     handler: 'StaleWhileRevalidate',
+    //     method: 'GET',
+    //     strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+    //   }
+    // ]
     // },
     icon: {
       source: '~/static/icon.png',
