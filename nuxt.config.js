@@ -55,8 +55,8 @@ export default {
     meta: {
       description: 'Proyecto realizado en NuxtJs'
     },
-    // workbox: {
-    //   cachingExtensions: '@/plugins/worbox-sync.js',
+    workbox: {
+      cachingExtensions: '@/plugins/worbox-sync.js',
     //   enabled: true,
     //   runtimeCaching: [
     //   {
@@ -66,7 +66,7 @@ export default {
     //     strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
     //   }
     // ]
-    // },
+    },
     icon: {
       source: '~/static/icon.png',
       fileName: 'icon.png'
