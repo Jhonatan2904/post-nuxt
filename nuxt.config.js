@@ -56,17 +56,16 @@ export default {
       description: 'Proyecto realizado en NuxtJs'
     },
     // workbox: {
-    //   importScripts: [
-    //     'sw_customer.js'
-    //   ],
+     
     // },
     icon: {
-      source: '~/static/icon-90x90.png',
-      fileName: 'icon-90x90.png'
+      source: '~/static/icon.png',
+      fileName: 'icon.png'
     },
     manifest: {
       name: 'Proyecto Tareas',
       short_name: 'NuxtJs',
+      description: 'Proyecto realizado con Nuxt y Firebase',
       start_url: '/',
       display: 'standalone',
       background_color: 'green',
