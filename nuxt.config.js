@@ -28,7 +28,6 @@ export default {
   plugins: [
     {src: '~/plugins/plugins.js'},
     { src: '~/plugins/date-filter.js' },
-    {src: '~/plugins/sw-onesignal.js'},
 
   ],
 
