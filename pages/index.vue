@@ -54,7 +54,7 @@ export default {
         }
       })
 
-      this.$OneSignal.getEmailId(response => {
+      this.$OneSignal.showHttpPermissionRequest(response => {
         console.log(response)
       })
     })
