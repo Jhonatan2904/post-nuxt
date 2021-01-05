@@ -2,6 +2,9 @@
   <div>
     <Header />
     <PostList :posts="objectPost"/>
+    <div>
+        <button @click="suscripcion">Suscribirte</button>
+    </div>
   </div>
 </template>
 
@@ -40,16 +43,30 @@ export default {
   mounted(){
     console.log("Probando OneSignal...");
     window.$OneSignal = window.$OneSignal || []
-
+    console.log(this.$OneSignal)
     this.$OneSignal.push(() => {
       this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
         if (isEnabled) {
           console.log("Push Notifications is actived.");
+
         } else {
           console.log("Push Notifications is not actived.");
         }
       })
+
+      this.$OneSignal.getEmailId(response => {
+        console.log(response)
+      })
     })
+  },
+
+  methods: {
+    suscripcion(){
+      // const permiso = Notification.requestPermission(result => {
+      //   console.log(result);
+      // })
+      
+    }
   },
 
   computed: {
