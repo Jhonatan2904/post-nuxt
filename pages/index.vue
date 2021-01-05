@@ -37,9 +37,8 @@ export default {
   //   })
   // },
 
-  created(){
-    // this.$store.dispatch('loadPost', this.objectPost)
-    // console.log(this.$store.getters.getPosts)
+  mounted(){
+    console.log(this.$OneSignal)
   },
 
   computed: {

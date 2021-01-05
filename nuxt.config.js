@@ -14,7 +14,8 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Ranchers&display=swap'}
     ],
     script: [
-      {src : 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit'}
+      { src: 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit' },
+      {src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js'}
     ]
   },
 
@@ -82,6 +83,16 @@ export default {
       theme_color: 'darkgreen',
       orientation: 'portrait-primary'
     },
+  },
+
+  onesignal: {
+    init: {
+      appId: 'd5b0bae0-e122-45fb-90fe-653d09242158',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disabled: true
+      }
+    }
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
