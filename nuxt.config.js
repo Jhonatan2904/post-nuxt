@@ -65,8 +65,8 @@ export default {
     meta: {
       description: 'Proyecto realizado en NuxtJs'
     },
-    workbox: {
-      swURL: './OneSignalWorker.js'
+    // workbox: {
+      // swURL: './OneSignalWorker.js'
       //D:\CURSOS\Java Script\Nuxt_JS\Ejercicio1\static\OneSignalSDKUpdaterWorker.js
       // dev: true,
       // cachingExtensions: '@/plugins/worbox-sync.js',
@@ -79,7 +79,7 @@ export default {
     //     strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
     //   }
     // ]
-    },
+    // },
     icon: {
       source: '~/static/icon.png',
       fileName: 'icon.png'
