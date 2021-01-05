@@ -42,8 +42,6 @@
     },
     computed: {
       postLink(){
-        console.log(this.isAdmin)
-
         return this.isAdmin ? '/admin/' + this.id : '/post/' + this.id
         // return this.isAdmin ? '/api'  : '/about'
 

@@ -38,7 +38,7 @@ export default {
   // },
 
   mounted(){
-    console.log(this.$OneSignal)
+    // console.log(this.$OneSignal)
   },
 
   computed: {
