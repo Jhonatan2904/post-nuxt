@@ -38,7 +38,6 @@ export default {
   buildModules: [
   ],
 
-  //configuracion pwa
 
  
 
@@ -47,6 +46,7 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
+    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
   ],
 
@@ -55,8 +55,9 @@ export default {
     meta: {
       description: 'Proyecto realizado en NuxtJs'
     },
-    workbox: {
-      cachingExtensions: '@/plugins/worbox-sync.js',
+    // workbox: {
+      // dev: true,
+      // cachingExtensions: '@/plugins/worbox-sync.js',
     //   enabled: true,
     //   runtimeCaching: [
     //   {
@@ -66,7 +67,7 @@ export default {
     //     strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
     //   }
     // ]
-    },
+    // },
     icon: {
       source: '~/static/icon.png',
       fileName: 'icon.png'

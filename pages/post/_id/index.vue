@@ -1,13 +1,13 @@
 <template>
   <div class="single-post-page">
-    <section>
-      <h1 class="post-title">{{ objectPost.title }}</h1>
+    <!-- <section> -->
+      <!-- <h1 class="post-title">{{ objectPost.title }}</h1>
       <div class="post-details">
         <div>Last update on: {{objectPost.updated | date}} - </div>
         <div> &nbsp;Writen by {{objectPost.author}}</div>
       </div>
       <p>{{objectPost.text}}</p>
-    </section>
+    </section> -->
     <section class="post-feedback">
       Send email to: <a href="#">Correo</a>
     </section>
@@ -17,7 +17,7 @@
 <script>
 import axios from 'axios';
   export default {
-    asyncData(context) {
+    asyncData(context, route) {
       // setTimeout(() => {
       //   callback(null, {
       //     objectPost:
@@ -29,15 +29,14 @@ import axios from 'axios';
       //       }
       //   })
       // }, 4000);
-      // console.log(context.params.id)
-      return axios.get('https://nuxt-js-b3202.firebaseio.com/posts/' + context.params.id + '.json')
-      .then(response => {
-          // console.log(response.data)
-          return {
-            objectPost: response.data
-          }
-      })
-      .catch(e => context.error(e))
+      // return axios.get('https://nuxt-js-b3202.firebaseio.com/posts/' + context.params.id + '.json')
+      // .then(response => {
+      //     console.log(response.data)
+      //     return {
+      //       objectPost: response.data
+      //     }
+      // })
+      // .catch(e => context.error(e))
     },
   }
 </script>

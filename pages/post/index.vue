@@ -1,6 +1,6 @@
 <template>
     <div>
-      <PostList :posts="objectPost" />
+      <PostList :posts="getPosts" :isAdmin="false" />
     </div>
 </template>
 
@@ -46,7 +46,7 @@ export default {
     }).catch()
   },
   computed: {
-    objectPost(){
+    getPosts(){
       return this.$store.getters.getPosts
     }
   },
