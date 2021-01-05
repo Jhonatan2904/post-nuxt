@@ -66,7 +66,7 @@ export default {
       description: 'Proyecto realizado en NuxtJs'
     },
     workbox: {
-      swURL: '@/static/OneSignalWorker.js'
+      swURL: './OneSignalWorker.js'
       //D:\CURSOS\Java Script\Nuxt_JS\Ejercicio1\static\OneSignalSDKUpdaterWorker.js
       // dev: true,
       // cachingExtensions: '@/plugins/worbox-sync.js',
