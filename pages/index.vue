@@ -40,6 +40,15 @@ export default {
   mounted(){
     console.log("Probando OneSignal...");
     console.log(this.$OneSignal)
+    this.$OneSignal.push(() => {
+      this.$$OneSignal.isPushNotificationsEnabled((isEnabled) => {
+        if (isEnabled) {
+          console.log("Push Notifications is actived.");
+        } else {
+          console.log("Push Notifications is not actived.");
+        }
+      })
+    })
   },
 
   computed: {
