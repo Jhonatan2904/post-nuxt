@@ -39,6 +39,8 @@ export default {
 
   mounted(){
     console.log("Probando OneSignal...");
+    window.$OneSignal = window.$OneSignal || []
+    console.log(window.$OneSignal)
     console.log(this.$OneSignal)
     this.$OneSignal.push(() => {
       this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
