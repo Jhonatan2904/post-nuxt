@@ -38,7 +38,8 @@ export default {
   // },
 
   mounted(){
-    // console.log(this.$OneSignal)
+    console.log("Probando OneSignal...");
+    console.log(this.$OneSignal)
   },
 
   computed: {

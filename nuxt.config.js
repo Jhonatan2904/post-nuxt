@@ -51,7 +51,7 @@ export default {
     '@nuxtjs/pwa',
   ],
 
-   onesignal: {
+   oneSignal: {
     init: {
       appId: 'd5b0bae0-e122-45fb-90fe-653d09242158',
       allowLocalhostAsSecureOrigin: true,
