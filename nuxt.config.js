@@ -51,7 +51,16 @@ export default {
     '@nuxtjs/pwa',
   ],
 
- 
+   onesignal: {
+    init: {
+      appId: 'd5b0bae0-e122-45fb-90fe-653d09242158',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disabled: true
+      }
+    }
+  },
+
   pwa: {
     meta: {
       description: 'Proyecto realizado en NuxtJs'
@@ -85,15 +94,7 @@ export default {
     },
   },
 
-  onesignal: {
-    init: {
-      appId: 'd5b0bae0-e122-45fb-90fe-653d09242158',
-      allowLocalhostAsSecureOrigin: true,
-      welcomeNotification: {
-        disabled: true
-      }
-    }
-  },
+ 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
