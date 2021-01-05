@@ -28,7 +28,7 @@ export default {
   plugins: [
     {src: '~/plugins/plugins.js'},
     { src: '~/plugins/date-filter.js' },
-    // {src: '~/plugins/sw_cliente.js'},
+    {src: '~/plugins/sw_onesignal.js'},
 
   ],
 
@@ -67,7 +67,6 @@ export default {
       description: 'Proyecto realizado en NuxtJs'
     },
     // workbox: {
-      // swURL: './OneSignalWorker.js'
       //D:\CURSOS\Java Script\Nuxt_JS\Ejercicio1\static\OneSignalSDKUpdaterWorker.js
       // dev: true,
       // cachingExtensions: '@/plugins/worbox-sync.js',
