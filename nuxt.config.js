@@ -28,7 +28,6 @@ export default {
   plugins: [
     {src: '~/plugins/plugins.js'},
     { src: '~/plugins/date-filter.js' },
-
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -50,13 +49,13 @@ export default {
     '@nuxtjs/pwa',
   ],
 
-  
+
   oneSignal: {
     init: {
       appId: 'd5b0bae0-e122-45fb-90fe-653d09242158',
       allowLocalhostAsSecureOrigin: true,
       welcomeNotification: {
-        disabled: true
+        disabled: false
       }
     }
   },
