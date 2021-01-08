@@ -28,6 +28,8 @@ export default {
   plugins: [
     {src: '~/plugins/plugins.js'},
     { src: '~/plugins/date-filter.js' },
+    { src: '~/plugins/conf_pwa.js' },
+
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

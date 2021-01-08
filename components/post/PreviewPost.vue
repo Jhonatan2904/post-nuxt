@@ -43,7 +43,6 @@
     computed: {
       postLink(){
         return this.isAdmin ? '/admin/' + this.id : '/post/' + this.id
-        // return this.isAdmin ? '/api'  : '/about'
 
       }
     }
