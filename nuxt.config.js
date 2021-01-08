@@ -69,7 +69,16 @@ export default {
     workbox: {
       routingExtensions: '@/plugins/worbox-registerRoute.js',
       workboxExtensions: '@/plugins/workbox-extensions.js',
-      cachingExtensions: '@/plugins/workbox-caching.js'
+      cachingExtensions: '@/plugins/workbox-caching.js',
+      offlineStrategy: 'CacheFirst'
+      // runtimeCaching: [
+      //   {
+      //     urlPattern: '/_nuxt/',
+      //     handler: 'StaleWhileRevalidate',
+      //     method: 'GET',
+      //     strategyPlugins: []
+      //   }
+      // ]
     //   enabled: true,
     //   runtimeCaching: [
     //   {
@@ -113,7 +122,7 @@ export default {
   },
 
  routes: function(){
-    return axios.get('https://nuxt-js-b3202.firebaseio.com/posts.json')
+    return axios.get('https://nuxt-js-b3202.firebaseio.com/blog.json')
     .then(response => {
       const arrKeys = []
       for (let key in response.data){

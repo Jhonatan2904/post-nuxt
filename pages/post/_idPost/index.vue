@@ -19,7 +19,8 @@
     import axios from "axios"
     export default {
         asyncData({isDev, route, store, env, params, query, req, res, redirect, error}) {
-            return axios.get('https://nuxt-js-b3202.firebaseio.com/posts/' + params.idPost + '.json')
+          //https://nuxt-js-b3202.firebaseio.com/blog
+            return axios.get('https://nuxt-js-b3202.firebaseio.com/blog/' + params.idPost + '.json')
                 .then(response => {
                     // console.log(response.data)
                     return {

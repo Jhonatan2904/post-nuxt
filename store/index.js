@@ -38,7 +38,7 @@ const crearStore = ()=> {
     actions: {
       nuxtServerInit({commit}, context){
           // cargar los datos desde firebase
-          return axios.get(process.env.baseUrl + '/posts.json')
+          return axios.get(process.env.baseUrl + '/blog.json')
           .then(response => {
             const arrPosts = []
             for(let key in response.data){
@@ -49,7 +49,7 @@ const crearStore = ()=> {
           })
           .catch(e => context.error(e))
       },
-      
+
       loadPost(vuexStore, data){
         vuexStore.commit('loadPost', data)
       },
@@ -59,7 +59,7 @@ const crearStore = ()=> {
           ...data,
           updated: new Date()
         }
-        return axios.post('https://nuxt-js-b3202.firebaseio.com/posts.json?auth=' + state.token , sendData)
+        return axios.post('https://nuxt-js-b3202.firebaseio.com/blog.json?auth=' + state.token , sendData)
         .then(response => {
           // console.log(response)
           commit('addPost', {...sendData, id: response.data.name})
@@ -68,7 +68,7 @@ const crearStore = ()=> {
       },
 
       editedPost({commit, state}, dataEdited){
-        return axios.put('https://nuxt-js-b3202.firebaseio.com/posts/' + dataEdited.id + '.json?auth=' + state.token , {...dataEdited, updated: new Date()})
+        return axios.put('https://nuxt-js-b3202.firebaseio.com/blog/' + dataEdited.id + '.json?auth=' + state.token , {...dataEdited, updated: new Date()})
         .then(response => {
           // console.log(response)
           commit('editedPost', dataEdited)

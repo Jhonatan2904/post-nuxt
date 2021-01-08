@@ -38,7 +38,7 @@ export default {
         objectPost: postData
       }
     }
-    return Axios.get('https://nuxt-js-b3202.firebaseio.com/posts.json')
+    return Axios.get('https://nuxt-js-b3202.firebaseio.com/blog.json')
     .then(data => {
       return {
         objectPost: data.data

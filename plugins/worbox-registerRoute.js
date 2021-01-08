@@ -1,11 +1,7 @@
-
-
-
-
 //estrategia cacheFirst
 
 workbox.routing.registerRoute(
-  new RegExp('https://nuxt-js-b3202.firebaseio.com/posts.json'),
+  new RegExp('https://nuxt-js-b3202.firebaseio.com/blog.json'),
   new workbox.strategies.NetworkFirst({
     cacheName: 'worbox_dinamic_cdn',
     plugins: [
@@ -16,3 +12,4 @@ workbox.routing.registerRoute(
     ]
   })
 )
+
