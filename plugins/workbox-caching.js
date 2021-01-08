@@ -1,0 +1,4 @@
+// estrategia stale while revalidate
+
+
+

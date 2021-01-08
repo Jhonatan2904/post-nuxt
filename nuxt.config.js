@@ -66,10 +66,10 @@ export default {
     meta: {
       description: 'Proyecto realizado en NuxtJs'
     },
-    // workbox: {
-      //D:\CURSOS\Java Script\Nuxt_JS\Ejercicio1\static\OneSignalSDKUpdaterWorker.js
-      // dev: true,
-      // cachingExtensions: '@/plugins/worbox-sync.js',
+    workbox: {
+      routingExtensions: '@/plugins/worbox-registerRoute.js',
+      workboxExtensions: '@/plugins/workbox-extensions.js',
+      cachingExtensions: '@/plugins/workbox-caching.js'
     //   enabled: true,
     //   runtimeCaching: [
     //   {
@@ -79,7 +79,7 @@ export default {
     //     strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
     //   }
     // ]
-    // },
+    },
     icon: {
       source: '~/static/icon.png',
       fileName: 'icon.png'

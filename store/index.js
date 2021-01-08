@@ -49,6 +49,7 @@ const crearStore = ()=> {
           })
           .catch(e => context.error(e))
       },
+      
       loadPost(vuexStore, data){
         vuexStore.commit('loadPost', data)
       },
