@@ -24,6 +24,9 @@
             <nuxt-link to="/api" tag="li" class="nav-item">
               <a class="nav-link">Api</a>
             </nuxt-link>
+            <nuxt-link to="/prueba" tag="li" class="nav-item">
+              <a class="nav-link">Recaptcha</a>
+            </nuxt-link>
           </ul>
         </div>
       </div>

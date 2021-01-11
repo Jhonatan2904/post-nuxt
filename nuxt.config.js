@@ -10,7 +10,7 @@ export default {
       { hid: 'description', name: 'description', content: 'my website description' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/icon-90x90.png' },
+      { rel: 'icon', type: 'image/png', href: '~/static/icon.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Ranchers&display=swap'}
     ],
     script: [
@@ -67,14 +67,21 @@ export default {
       description: 'Proyecto realizado en NuxtJs'
     },
     workbox: {
+      // cacheAssets: false,
       routingExtensions: '@/plugins/worbox-registerRoute.js',
       workboxExtensions: '@/plugins/workbox-extensions.js',
       cachingExtensions: '@/plugins/workbox-caching.js',
-      offlineStrategy: 'CacheFirst'
+      offlineStrategy: 'NetworkFirst',
+      globPatterns: ['**/*.{js}'],
       // runtimeCaching: [
       //   {
-      //     urlPattern: '/_nuxt/',
-      //     handler: 'StaleWhileRevalidate',
+      //     handler: 'StaleWhileRevalidate'
+      //   }
+      // ]
+      // runtimeCaching: [
+      //   {
+      //     urlPattern: '/_nuxt/*.{js, css}',
+      //     handler: 'CacheFirst',
       //     method: 'GET',
       //     strategyPlugins: []
       //   }
